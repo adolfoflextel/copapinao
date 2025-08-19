@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copa Valorant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🏆 Copa Valorant - Formação de Times</h1>
+
+  <form id="formJogador">
+    <input type="text" placeholder="Nome" id="nome" required />
+    <input type="text" placeholder="Nickname (in-game)" id="nick" required />
+    <button type="submit">Adicionar Jogador</button>
+  </form>
+
+  <h2>Jogadores Inscritos</h2>
+  <ul id="listaJogadores"></ul>
+
+  <button onclick="sortearTimes()">Sortear Times</button>
+
+  <div id="timesFormados"></div>
+
+  <script src="script.js"></script>
+  <script>
+    carregarJogadores();
+  </script>
+</body>
+</html>
