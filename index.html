@@ -3,47 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valorant Hub SPA Final</title>
+  <title>Resultados Valorant</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="logo">
-      
-      <h1>Copa Pinão</h1>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#" onclick="navigate('home')">🏠 Início</a></li>
-        <li><a href="#" onclick="navigate('copa')">🏆 Copa</a></li>
-        <li><a href="#" onclick="navigate('resultados')">📊 Resultados</a></li>
-      </ul>
-    </nav>
+  <!-- Cabeçalho com logo -->
+  <header>
+    <img src="logo.png" alt="Logo Valorant" class="logo">
+    <h1>Resultados Valorant</h1>
   </header>
 
-  <aside class="sidebar">
-  <div class="logo">
-    <img src="assets/valorant-logo.png" alt="Valorant Logo">
-    <h1>Valorant Hub</h1>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="#" onclick="navigate('home')">Início</a></li>
-      <li><a href="#" onclick="navigate('copa')">Copa</a></li>
-      <li><a href="#" onclick="navigate('resultados')">Resultados</a></li>
-    </ul>
-  </nav>
-</aside>
-  
-  <main id="app"></main>
+  <!-- Layout SPA -->
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li><a href="#home" data-page="home">🏠 Início</a></li>
+        <li><a href="#partidas" data-page="partidas">📊 Partidas</a></li>
+        <li><a href="#jogadores" data-page="jogadores">🎯 Jogadores</a></li>
+        <li><a href="#estatisticas" data-page="estatisticas">📈 Estatísticas</a></li>
+      </ul>
+    </nav>
 
-  <footer>
-    <p>Desenvolvido por Adolfo © 2025</p>
-  </footer>
+    <main id="content">
+      <!-- Conteúdo SPA será carregado aqui -->
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
