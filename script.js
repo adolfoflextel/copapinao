@@ -110,3 +110,10 @@ function updateWinner() {
     winnerText.textContent = "Empate";
   }
 }
+
+fetch('https://api.tracker.gg/api/v2/valorant/standard/profile/riot/<USERNAME>')
+  .then(res => res.json())
+  .then(data => {
+      console.log(data);
+      // Aqui você popula a página com as stats do jogador
+  });
