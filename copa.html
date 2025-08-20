@@ -1,29 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Copa Valorant - Formação de Times</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formação de Times - Copa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>🏆 Copa Valorant - Formação de Times</h1>
+    <header>
+        <h1>⚽ Formação de Times</h1>
+    </header>
 
-  <input type="text" id="nomeJogador" placeholder="Nome do Jogador">
-  <button onclick="adicionarJogador()">Adicionar Jogador</button>
-  <button onclick="sortearTimes()">Sortear Times</button>
-  <button onclick="limparJogadores()">🗑️ Limpar Jogadores</button>
-  <button onclick="limparTimes()">🗑️ Limpar Times</button>
+    <main class="container">
+        <!-- Adicionar Jogadores -->
+        <section class="card">
+            <h2>Adicionar Jogadores</h2>
+            <input type="text" id="playerName" placeholder="Nome do jogador">
+            <button onclick="addPlayer()">Adicionar</button>
+            <ul id="playerList"></ul>
+        </section>
 
-  <div id="lista-jogadores">
-    <h3>Jogadores Inscritos</h3>
-    <ul id="jogadores"></ul>
-  </div>
+        <!-- Criação de Times -->
+        <section class="card">
+            <h2>Gerar Times</h2>
+            <label for="teamCount">Quantidade de times:</label>
+            <input type="number" id="teamCount" min="2" max="10" value="2">
+            <button onclick="generateTeams()">Montar Times</button>
+        </section>
 
-  <div id="lista-times">
-    <h3>Times Formados</h3>
-    <div id="times"></div>
-  </div>
+        <!-- Exibição dos Times -->
+        <section class="card">
+            <h2>Times Formados</h2>
+            <div id="teamsContainer" class="teams-container"></div>
+        </section>
+    </main>
 
-  <script src="script.js"></script>
+    <footer>
+        <p>🏆 Copa Pião – Organização de Times</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
