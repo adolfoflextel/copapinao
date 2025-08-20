@@ -88,3 +88,20 @@ button.add-btn {
 }
 
 button.add-btn:hover { background: #0ff; }
+
+body {
+  display: flex;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #ff4655;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sidebar .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 30px; }
+.sidebar ul { list-style: none; padding: 0; }
+.sidebar ul li a { color: #fff; text-decoration: none; display: block; padding: 10px 5px; transition: 0.3s; }
+.sidebar ul li a:hover { background-color: #e33e4b; }
+main { flex: 1; padding: 2rem; }
