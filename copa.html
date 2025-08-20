@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Copa Valorant - Formação de Times</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>🏆 Copa Valorant - Formação de Times</h1>
+
+  <input type="text" id="nomeJogador" placeholder="Nome do Jogador">
+  <button onclick="adicionarJogador()">Adicionar Jogador</button>
+  <button onclick="sortearTimes()">Sortear Times</button>
+  <button onclick="limparJogadores()">🗑️ Limpar Jogadores</button>
+  <button onclick="limparTimes()">🗑️ Limpar Times</button>
+
+  <div id="lista-jogadores">
+    <h3>Jogadores Inscritos</h3>
+    <ul id="jogadores"></ul>
+  </div>
+
+  <div id="lista-times">
+    <h3>Times Formados</h3>
+    <div id="times"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
