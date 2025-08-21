@@ -6,7 +6,7 @@
   <title>Copa Pinhão • Dashboard</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Topbar -->
@@ -15,56 +15,29 @@
       <img src="assets/valorant-logo.png" alt="Valorant" class="logo"/>
       <div class="titles">
         <h1>Copa Pinhão</h1>
-        <span class="subtitle">Dashboard de Resultados</span>
+        <span class="subtitle">Dashboard, Jogadores & Registro de Partidas</span>
       </div>
     </div>
     <nav class="topnav">
-      <!-- quando a segunda página estiver pronta, este link leva para ela -->
-      <a class="btn ghost" href="jogadores.html">👥 Jogadores & Sorteio</a>
+      <button class="nav-btn" data-route="dashboard">📊 Dashboard</button>
+      <button class="nav-btn" data-route="players">👥 Jogadores & Sorteio</button>
+      <button class="nav-btn" data-route="matches">📝 Registrar Partida</button>
     </nav>
   </header>
 
-  <!-- Conteúdo -->
-  <main class="container">
-    <!-- KPIs -->
-    <section class="grid grid-kpi" id="kpis">
-      <!-- preenchido por JS -->
-    </section>
+  <div class="wrap">
+    <aside class="sidebar">
+      <ul>
+        <li><button class="side-link" data-route="dashboard">📊 Dashboard</button></li>
+        <li><button class="side-link" data-route="players">👥 Jogadores</button></li>
+        <li><button class="side-link" data-route="matches">📝 Registrar</button></li>
+      </ul>
+    </aside>
 
-    <!-- Últimas partidas -->
-    <section class="panel">
-      <div class="panel-head">
-        <h2>🎯 Últimas Partidas</h2>
-        <div class="actions">
-          <button class="btn" id="refreshBtn">Atualizar</button>
-        </div>
-      </div>
-      <div class="grid grid-matches" id="matches">
-        <!-- preenchido por JS -->
-      </div>
-    </section>
+    <main id="app" class="content"></main>
+  </div>
 
-    <!-- Ranking de jogadores -->
-    <section class="panel">
-      <div class="panel-head">
-        <h2>🏆 Ranking de Jogadores</h2>
-        <div class="actions">
-          <select id="rankMetric" class="select">
-            <option value="rating">Rating</option>
-            <option value="kd">K/D</option>
-            <option value="hs">HS%</option>
-          </select>
-        </div>
-      </div>
-      <div class="table" id="leaderboard">
-        <!-- preenchido por JS -->
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    Desenvolvido no estilo Valorant • © 2025
-  </footer>
+  <footer class="footer">Copa Pinhão • Estilo Valorant • LocalStorage • © 2025</footer>
 
   <script src="script.js"></script>
 </body>
