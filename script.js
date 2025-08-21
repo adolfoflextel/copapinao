@@ -1,5 +1,5 @@
 /* =========================================================
-   Copa Pinhão SPA – LocalStorage
+   Copa Pinão SPA – LocalStorage
    Páginas: Dashboard, Jogadores & Sorteio, Registro de Partidas
 ========================================================= */
 const $ = (s, c=document) => c.querySelector(s);
@@ -431,3 +431,4 @@ function renderRegister(){
     e.currentTarget.reset(); $('#rows').innerHTML=''; Array.from({length:5}).forEach(()=> addRow());
   });
 }
+
